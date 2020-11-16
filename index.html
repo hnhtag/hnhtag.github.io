@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://heinhtetaung.com" />
+    <link
+      rel="preconnect dns-prefetch"
+      href="https://fonts.gstatic.com/"
+      crossorigin
+    />
+    <link
+      rel="preconnect dns-prefetch"
+      href="https://kit-free.fontawesome.com/"
+      crossorigin
+    />
+
+    <title>Hein Htet Aung (hnhtag) – Personal Profile</title>
+    <meta
+      name="description"
+      content="Hein Htet Aung (hnhtag). Web developer, computer science student at University of Computer Studies (Maubin), former co-founder of IT Club UCSMUB"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.32.png" />
+
+    <!-- og - open graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://heinhtetaung.com" />
+    <meta
+      property="og:title"
+      content="Hein Htet Aung (hnhtag) – Personal Profile"
+    />
+    <meta
+      property="og:description"
+      content="Web developer, computer science student at University of Computer Studies (Maubin), former co-founder of IT Club UCSMUB"
+    />
+    <meta
+      property="og:image"
+      content="https://heinhtetaung.com/assets/images/hnhtag.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="1280" />
+    <meta property="og:image:alt" content="Hein Htet Aung" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hnhtag" />
+    <meta
+      name="twitter:title"
+      content="Hein Htet Aung (hnhtag) – Personal Profile"
+    />
+    <meta
+      name="twitter:description"
+      content="Web developer, computer science student at University of Computer Studies (Maubin), former co-founder of IT Club UCSMUB"
+    />
+    <meta
+      name="twitter:image"
+      content="https://heinhtetaung.com/assets/images/hnhtag.jpg"
+    />
+
+    <link
+      inline
+      href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        color: #242526;
+        font-weight: 400;
+      }
+      p {
+        padding: 0 24px;
+      }
+      a {
+        color: #242526;
+        text-decoration: none;
+        border-bottom: 1px dashed #242526;
+      }
+      a:hover {
+        border-bottom: 1px solid #242526;
+      }
+      footer {
+        padding: 0 24px;
+        text-align: center;
+        margin: 24px 0;
+      }
+      hr {
+        margin: 0 24px;
+        border-top: 0.1px solid #f4f4f4;
+      }
+
+      .primary-background {
+        background-color: #242526;
+        color: #ffffff;
+      }
+      .primary-text {
+        background-color: #ffffff;
+        color: #242526;
+      }
+      .image-container {
+        margin-top: -70px;
+        text-align: center;
+      }
+      .title-container {
+        margin-top: 16px;
+        text-align: center;
+        height: 80px;
+      }
+      .title-container > h1,
+      .title-container > h2 {
+        margin: 0;
+      }
+      .title-container > h1 {
+        font-weight: normal;
+      }
+      .title-container > p {
+        font-size: 18px;
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+      .image-border {
+        border-radius: 4px;
+        box-shadow: 0 0 2px 1px rgba(104, 104, 104, 0.4);
+        width: 128px;
+      }
+      .image-border:hover {
+        box-shadow: 0 0 2px 1px rgba(104, 104, 104, 0.7);
+      }
+      p.about {
+        width: 100%;
+        line-height: 1.5em;
+      }
+      footer span.social > i,
+      .about > p > i {
+        margin-right: 8px;
+      }
+      footer span.social > a {
+        margin-right: 8px;
+      }
+      .summary-item {
+        line-height: 1.5em;
+      }
+
+      [class*="col-"] {
+        width: 100%;
+        float: none;
+      }
+      @media only screen and (min-width: 800px) {
+        /* tablet & desktop */
+        .col-50 {
+          width: 50%;
+          float: left;
+        }
+        .col-30 {
+          width: 25%;
+          float: left;
+        }
+        .col-90 {
+          width: 75%;
+          float: left;
+        }
+
+        hr {
+          max-width: 65%;
+          margin: 24px;
+        }
+
+        .image-container {
+          margin-top: -96px;
+          text-align: right;
+        }
+        .title-container {
+          height: 96px;
+          margin-top: -84px;
+          padding-left: 24px;
+          text-align: left;
+          color: #ffffff;
+        }
+        p.about {
+          width: 70%;
+        }
+      }
+    </style>
+
+    <!-- timeline -->
+    <style>
+      .history-tl-container {
+        width: 100%;
+        margin: auto;
+        display: block;
+        position: relative;
+      }
+      .history-tl-container ul.tl {
+        margin: 5px 0;
+        padding: 0;
+        display: inline-block;
+      }
+      .history-tl-container ul.tl li {
+        list-style: none;
+        margin: auto;
+        margin-left: 32px;
+        min-height: 50px;
+        /*background: rgba(255,255,0,0.1);*/
+        border-left: 1px dashed #86d6ff;
+        padding: 0 0 50px 30px;
+        position: relative;
+      }
+      .history-tl-container ul.tl li:last-child {
+        border-left: 0;
+      }
+      .history-tl-container ul.tl li::before {
+        position: absolute;
+        left: -18px;
+        top: -5px;
+        content: " ";
+        border: 8px solid rgba(255, 255, 255, 0.74);
+        border-radius: 500%;
+        background: #258cc7;
+        height: 20px;
+        width: 20px;
+        transition: all 500ms ease-in-out;
+      }
+      .history-tl-container ul.tl li:hover::before {
+        border-color: #258cc7;
+        transition: all 1000ms ease-in-out;
+      }
+      ul.tl li .item-title {
+        position: relative;
+        min-width: 200px;
+        padding-top: 40px;
+      }
+      ul.tl li .item-detail {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 13px;
+      }
+      ul.tl li .timestamp {
+        color: #383838;
+        position: absolute;
+        width: 200px;
+        left: 30px;
+        text-align: left;
+        font-size: 13px;
+      }
+      @media only screen and (min-width: 700px) {
+        .history-tl-container ul.tl li {
+          margin-left: 200px;
+        }
+      }
+      @media only screen and (min-width: 1177px) {
+        .history-tl-container {
+          width: 50%;
+        }
+        .history-tl-container ul.tl {
+          margin: 20px 0;
+        }
+        .history-tl-container ul.tl li {
+          margin-left: 200px;
+          min-height: 50px;
+        }
+        ul.tl li .item-title {
+          position: static;
+          padding-top: 0px;
+        }
+        ul.tl li .timestamp {
+          left: -60%;
+          text-align: right;
+        }
+      }
+    </style>
+
+    <script src="https://kit.fontawesome.com/e64767df89.js" crossorigin="anonymous" inline></script>
+
+    <script type="application/ld+json">
+      {"@context":"http://www.schema.org","@type":"Person","name":"Hein Htet Aung","alternateName":"hnhtag","jobTitle":"Web Developer","url":"https://heinhtetaung.com","image":"https://heinhtetaung.com/assets/images/hnhtag.jpg","address":{"@type":"PostalAddress","addressLocality":"Dedaye","addressRegion":"Ayeyarwady","addressCountry":"Myanmar"},"nationality":"Burmese","email":"mail@heinhtetaung.com","sameAs":["https://www.facebook.com/hnhtag.me","https://github.com/hnhtag","https://twitter.com/hnhtag","https://linkedin.com/in/hnhtag","https://www.instagram.com/hnhtag"],"knowsAbout":["Web Development","Linux Server Administration"],"colleague":[{"@type":"Person","name":"Htet Aung Lin","url":"https://www.htetaunglin.com"},{"@type":"Person","name":"Kaung Htut","url":"https://kaunghtut.com/"},{"@type":"Person","name":"Kaung Myat Paing","url":"https://kaungmyatpaing.com"}],"alumniOf":[{"@type":"OrganizationRole","roleName":"Computer Science Student","alumniOf":{"@type":"CollegeOrUniversity","name":"University of Computer Studies (Maubin)","url":"https://ucsmub.edu.mm","sameAs":"https://en.wikipedia.org/wiki/University_of_Computer_Studies_(Maubin)"},"startDate":"2015-12-01"},{"@type":"OrganizationRole","roleName":"Co-founder","alumniOf":{"@type":"EducationalOrganization","name":"IT Club","legalName":"IT Club UCSMUB","url":"https://www.itclubucsmub.com"},"startDate":"2017-12-15","endDate":"2020-01-15"}],"memberOf":[{"@type":"Organization","name":"Hludan","url":"https://hludan.org","sameAs":["https://www.facebook.com/hludan.org"]},{"@type":"Organization","name":"MMARC","sameAs":["https://www.facebook.com/mmarc.org"]},{"@type":"Organization","name":"Cyber King","legalName":"Cyber King Co., Ltd.","url":"http://www.cyberkingict.com"}]}
+    </script>
+  </head>
+
+  <body>
+    <div style="min-height: 150px;" class="row primary-background"></div>
+    <div class="row">
+      <div class="col-30">
+        <div class="image-container">
+          <img
+            class="image-border"
+            inline
+            src="assets/images/hnhtag.512.webp"
+            alt="Hein Htet Aung (hnhtag)"
+          />
+        </div>
+      </div>
+      <div class="col-90">
+        <div class="title-container">
+          <h1>Hein Htet Aung</h1>
+          <p>Web Developer</p>
+        </div>
+        <div>
+          <div class="about summary-item">
+            <p>
+              <i class="fas fa-university" style="font-size: 20px;"></i>
+              Studying Computer Science at&nbsp;
+              <a href="https://ucsmub.edu.mm"
+                >University of Computer Studies (Maubin)</a
+              >
+            </p>
+            <p>
+              <i class="fas fa-laptop-code"></i>
+              Junior Team Lead at&nbsp;
+              <a href="http://www.cyberkingict.com">Cyber King Co., Ltd.</a>
+            </p>
+          </div>
+          <hr />
+          <div class="about summary-item">
+            <ul>
+              <li>
+                Member of Team MMARC
+              </li>
+              <li>
+                Member of&nbsp;
+                <a href="https://hludan.org">Hludan</a>
+              </li>
+              <li>
+                Former Co-founder of&nbsp;
+                <a href="https://www.facebook.com/itclubucsmub"
+                  >IT Club UCSMUB</a
+                >
+              </li>
+              <li>
+                Former Program Team Lead at&nbsp;
+                <a href="https://www.facebook.com/barcampmaubin/"
+                  >BarCamp Maubin</a
+                >
+              </li>
+            </ul>
+          </div>
+          <p title="About" class="about">
+            A web developer from Dedaye. Currently, I'm a CS student and working
+            in a software company. I was one of the founding people of IT Club
+            UCSMUB, a student association, at the University of Computer Studies
+            (Maubin).
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <h2 style="text-align: center;">History with milestones</h2>
+      <div class="history-tl-container">
+        <ul class="tl">
+          <li class="tl-item">
+            <div class="timestamp">December 2015<br />Maubin</div>
+            <div class="item-title">
+              University of Computer Studies (Maubin)
+            </div>
+            <div class="item-detail">Build a door</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              December 2016<br />
+              Kanaung Hub, MICT Park
+            </div>
+            <div class="item-title">Web Design Skill Competition</div>
+            <div class="item-detail">Myanmar Skills 2016</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              March 2017<br />
+              Conferenc Hall, MICT Park
+            </div>
+            <div class="item-title">
+              Second Prize Award
+            </div>
+            <div class="item-detail">
+              Myanmar Skills 2016 (Web Design Skill) Competition
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              June 2017<br />
+              Bangkok
+            </div>
+            <div class="item-title">
+              Participate "Technology Investment Conference 2017" &
+              <br />"Manufacturing Expo 2017"
+            </div>
+            <div class="item-detail">
+              Next Generation Business
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              ~August 2017<br />
+              Yangon
+            </div>
+            <div class="item-title">
+              Freelancing
+            </div>
+            <div class="item-detail">
+              Open a door
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              September 2017<br />
+              UCSY
+            </div>
+            <div class="item-title">Samsung Tech Institute</div>
+            <div class="item-detail">Mobile application training 2017</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              December 2017<br />
+              UCSMUB
+            </div>
+            <div class="item-title">Founded IT Club UCSMUB</div>
+            <div class="item-detail">Co-founder/EC-member</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              January 2018<br />
+              Maubin
+            </div>
+            <div class="item-title">Joined BarCamp Maubin</div>
+            <div class="item-detail">Program Team Lead</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              June 2018<br />
+              Yangon
+            </div>
+            <div class="item-title">Got a job</div>
+            <div class="item-detail">Part/full time</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              November 2018<br />
+              Ngwesaung
+            </div>
+            <div class="item-title">Yetagun Youth Program</div>
+            <div class="item-detail">Season III</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              February 2019<br />
+              UCSMUB
+            </div>
+            <div class="item-title">Consolation prize</div>
+            <div class="item-detail">
+              Product Show 2019, University of Computer Studies (Maubin)
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              June 2019<br />
+              MCDC, Maubin
+            </div>
+            <div class="item-title">Build a team</div>
+            <div class="item-detail">Team MMARC</div>
+          </li>
+          <li class="tl-item">
+            <div class="timestamp">
+              May 2020<br />
+              Dedaye
+            </div>
+            <div class="item-title">Joined Doh Phandee Platform</div>
+            <div class="item-detail">Scaling up network</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="row">
+      <div>
+        <span class="social"
+          ><i class="fab fa-facebook-square"></i
+          ><a href="https://www.facebook.com/hnhtag.me">Facebook</a>
+        </span>
+        <span class="social"
+          ><i class="fab fa-github-square"></i
+          ><a href="https://github.com/hnhtag">Github</a>
+        </span>
+        <span class="social"
+          ><i class="fab fa-linkedin"></i
+          ><a href="https://linkedin.com/in/hnhtag">Linkedin</a>
+        </span>
+      </div>
+      <p>Hein Htet Aung (hnhtag) - Reach me via mail@heinhtetaung.com</p>
+    </footer>
+  </body>
+</html>
+<!-- footnotes 
+  Credits
+  timeline: https://codepen.io/pranjal-goswami/pen/RNdpOP
+-->
